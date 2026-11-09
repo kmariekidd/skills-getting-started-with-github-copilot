@@ -49,3 +49,14 @@ The application uses a simple data model with meaningful identifiers:
    - Grade level
 
 All data is stored in memory, which means data will be reset when the server restarts.
+
+## Testing
+
+Run the backend tests from the repository root:
+
+```
+pytest
+```
+
+The tests cover the API endpoints, successful and invalid registrations,
+duplicate-registration prevention, and participant removal.
