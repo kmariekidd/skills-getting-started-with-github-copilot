@@ -31,6 +31,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| DELETE | `/activities/{activity_name}/signup/{email}`                      | Unregister a student from an activity                              |
 
 ## Data Model
 
@@ -48,3 +49,14 @@ The application uses a simple data model with meaningful identifiers:
    - Grade level
 
 All data is stored in memory, which means data will be reset when the server restarts.
+
+## Testing
+
+Run the backend tests from the repository root:
+
+```
+pytest
+```
+
+The tests cover the API endpoints, successful and invalid registrations,
+duplicate-registration prevention, and participant removal.
